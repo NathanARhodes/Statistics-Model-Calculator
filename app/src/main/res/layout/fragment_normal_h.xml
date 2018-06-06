@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".normalHFragment">
+
+    <EditText
+        android:id="@+id/hSampleProb"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Sample Probability"
+        android:inputType="numberDecimal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hNullHypothesis"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="180dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="32dp"
+        android:text="Normal Model (Hypothesis)"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Theme"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hSampleSize"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Sample Size"
+        android:inputType="number"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/hAplhaLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hNullHypothesis" />
+
+    <EditText
+        android:id="@+id/hNullHypothesis"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Null Hypothesis"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/hSampleProb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/hAplhaLevel"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Alpha Level"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hSampleSize"
+        app:layout_constraintTop_toBottomOf="@+id/hSampleProb" />
+
+    <Switch
+        android:id="@+id/twoTailedSwitch"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="152dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:splitTrack="false"
+        android:text="Two Tailed"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hAplhaLevel"
+        tools:checked="false" />
+
+    <Switch
+        android:id="@+id/upLowSwitch"
+        android:layout_width="42dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/lowerTailedTextView"
+        app:layout_constraintStart_toEndOf="@+id/upperTailedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/twoTailedSwitch" />
+
+    <TextView
+        android:id="@+id/upperTailedTextView"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="32dp"
+        android:text="Upper-Tailed"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/upLowSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoTailedSwitch" />
+
+    <TextView
+        android:id="@+id/lowerTailedTextView"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="152dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Lower-Tailed"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/upLowSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/twoTailedSwitch" />
+
+    <TextView
+        android:id="@+id/normalHSolution"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upLowSwitch" />
+
+
+</android.support.constraint.ConstraintLayout>

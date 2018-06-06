@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Major Final Project</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="confidence">
+        <item>98</item>
+        <item>95</item>
+        <item>90</item>
+    </string-array>
+</resources>
