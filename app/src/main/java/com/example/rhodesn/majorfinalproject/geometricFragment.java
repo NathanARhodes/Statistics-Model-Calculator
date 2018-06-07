@@ -28,7 +28,6 @@ public class geometricFragment extends Fragment {
     public static void calculate() {
 
         TextView solutionText = (TextView) v.findViewById(R.id.geoSolution);
-        solutionText.setText("Ur mom gay");
 
 
             EditText geoProb = (EditText) v.findViewById(R.id.hSampleProb);
