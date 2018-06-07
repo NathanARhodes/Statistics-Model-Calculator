@@ -10,47 +10,48 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="192dp"
-        android:layout_height="69dp"
+        android:layout_width="121dp"
+        android:layout_height="63dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif"
         android:text="Model:"
         android:textAlignment="textStart"
-        android:textSize="50sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <Spinner
         android:id="@+id/modelPicker"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="150dp"
+        android:layout_height="53dp"
         android:layout_marginBottom="35dp"
         android:layout_marginEnd="65dp"
         android:layout_marginStart="137dp"
+        android:spinnerMode="dialog"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/fragmentWrapper"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <fragment
         android:id="@+id/fragmentWrapper"
         android:name="com.example.rhodesn.majorfinalproject.choose"
         android:layout_width="575dp"
-        android:layout_height="600dp"
+        android:layout_height="350dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.0" />
@@ -66,6 +67,7 @@
         android:text="Please choose a model"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textColor="@android:color/holo_red_light"
+        android:textSize="10sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,10 +81,10 @@
         style="@android:style/Widget.Material.Button"
         android:layout_width="178dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="224dp"
         android:layout_marginStart="222dp"
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/colorAccent"
         android:elevation="24dp"
         android:onClick="calc"
         android:text="Calculate"
@@ -91,6 +93,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
