@@ -34,8 +34,8 @@ public class MajorProgram extends AppCompatActivity implements AdapterView.OnIte
         List<String> list= new ArrayList<String>();
         list.add("Binomial");
         list.add("Geometric");
-        list.add("Normal (Confidence)");
-        list.add("Normal (Hypothesis)");
+        list.add("Normal for Proportions (Confidence)");
+        list.add("Normal for Proportions (Hypothesis)");
         adapter = new ArrayAdapter<String>(getApplicationContext(),
                 android.R.layout.simple_spinner_item, list);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -50,7 +50,7 @@ public class MajorProgram extends AppCompatActivity implements AdapterView.OnIte
                     modelChooseError.setVisibility(View.INVISIBLE);
                     changeFragment(view, 1);
 
-                }else if(modelSpinnerV.getSelectedItem().toString() == "Normal (Confidence)"){
+                }else if(modelSpinnerV.getSelectedItem().toString() == "Normal for Proportions (Confidence)"){
                     modelChooseError.setVisibility(View.INVISIBLE);
                     changeFragment(view, 2);
 
@@ -58,7 +58,7 @@ public class MajorProgram extends AppCompatActivity implements AdapterView.OnIte
                     modelChooseError.setVisibility(View.INVISIBLE);
                     changeFragment(view, 3);
 
-                }else if(modelSpinnerV.getSelectedItem().toString() == "Normal (Hypothesis)"){
+                }else if(modelSpinnerV.getSelectedItem().toString() == "Normal for Proportions (Hypothesis)"){
 
                     modelChooseError.setVisibility(View.INVISIBLE);
                     changeFragment(view, 5);

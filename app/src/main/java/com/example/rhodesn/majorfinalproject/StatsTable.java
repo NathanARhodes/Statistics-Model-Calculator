@@ -61,6 +61,10 @@ public class StatsTable {
 
 	public static double getTableValue(double key) {
 
+		if(key > 3.96){
+			key = 3.96;
+		}
+
 		return (double) table.get(df.format(key));
 	}
 
